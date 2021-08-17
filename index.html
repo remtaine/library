@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INSERT_TITLE_HERE</title>
+    <title>My Online Library</title>
 
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
@@ -14,10 +14,83 @@
     <script src="https://kit.fontawesome.com/d8f0c855f0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-    </nav>
+    <div id="overlay">
+        <form id="book-prompt">
+            <!-- <label for="title">Title: </label><br>
+            <input type="text" id="title" name="title" required><br /> -->
+            <label for="title">Title: </label><br>
+            <input type="text" id="title" name="prompt-title" required><br />
+            <label for="author">Author: </label><br>
+            <input type="text" id="author" name="prompt-author" required><br />
+            <label for="pages">Pages: </label><br>
+            <input type="text" id="pages" name="prompt-pages" required><br />
+
+            <label for="has-read">I've read this: </label> <br />
+            <input type="checkbox" id="has-read" name="prompt-read" value="read"><br />
+
+            <input type="button" id="submit" value="Submit">
+        </form>
+    </div> 
+    <header>
+        <h1>Library</h1>
+    </header>
+
+    <br />
 
     <main>
+        <button id="new-book">Add New Book</button>
+
+        <br />
+
+        <section id="library">
+            <!-- <article class="book">
+                <h2 class="book-title">War of the Worlds</h2>
+                <h3 class="book-author">HG Wells</h3>
+                <h3 class="book-pages">69 Pages</h3>
+                <button class="read-book toggled">Not Read</button>
+                <button class="remove-book bold">Remove</button>
+            </article>
+
+            <article class="book">
+                <h2 class="book-title">WW II Pt. 2</h2>
+                <h3 class="book-author">HG Wells</h3>
+                <h3 class="book-pages">69 Pages</h3>
+                <button class="read-book">Read</button>
+                <button class="remove-book bold">Remove</button>
+            </article>
+
+            <article class="book">
+                <h2 class="book-title">Invisible Man</h2>
+                <h3 class="book-author">HG Wells</h3>
+                <h3 class="book-pages">69 Pages</h3>
+                <button class="read-book">Read</button>
+                <button class="remove-book bold">Remove</button>
+            </article>
+
+            <article class="book">
+                <h2 class="book-title">Journey</h2>
+                <h3 class="book-author">HG Wells</h3>
+                <h3 class="book-pages">69 Pages</h3>
+                <button class="read-book">Read</button>
+                <button class="remove-book bold">Remove</button>
+            </article>
+
+            <article class="book">
+                <h2 class="book-title">Jungle Book</h2>
+                <h3 class="book-author">HG Wells</h3>
+                <h3 class="book-pages">69 Pages</h3>
+                <button class="read-book">Read</button>
+                <button class="remove-book bold">Remove</button>
+            </article>  
+
+            <article class="book">
+                <h2 class="book-title">Ready Player One</h2>
+                <h3 class="book-author">HG Wells</h3>
+                <h3 class="book-pages">69 Pages</h3>
+                <button class="read-book">Read</button>
+                <button class="remove-book bold">Remove</button>
+            </article> -->
+        </section>
     </main>
     
     <footer>
