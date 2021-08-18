@@ -13,17 +13,7 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
     this.index = books.length;
-    // this.info = function() {
-    //     let a = title + this.author;
-    //     a += read ? " finished reading" : "not yet read";
-    //     return a;
-    // }
 }
-Book.prototype.info = function() {
-    let info = "title: " + title + ", author: " + author + ", " + pages + " pages read, ";
-    info += read ? "finished reading" : "not yet read";
-    return info;
-}   
 
 addBookButton.addEventListener('click', function() {
     overlay.style.display = "flex";
@@ -32,27 +22,22 @@ addBookButton.addEventListener('click', function() {
 formSubmitButton.addEventListener('click', function() {
     const form = new FormData(document.getElementById('book-prompt'));
     if (form.get('prompt-title') !== "" && form.get('prompt-author') !== "" && form.get('prompt-pages') !== "") {
-        console.log(form.get('prompt-title'));
-        console.log(form.get('prompt-author'));
-        console.log(form.get('prompt-pages'));
+        // console.log(form.get('prompt-title'));
+        // console.log(form.get('prompt-author'));
+        // console.log(form.get('prompt-pages'));
         generateBook();
     }
 });
 
 function generateBook() {
     const form = new FormData(document.getElementById('book-prompt'));
-    console.log(form);
     // for (let pair of form.entries()) {
-    //     console.log(pair);
     // }
 
     let hasRead = form.has('prompt-read');
 
     const newBook = new Book(form.get('prompt-title'), form.get('prompt-author'), form.get('prompt-pages'), hasRead);
     addBookToLibrary(newBook);
-    // console.log(form.get('prompt-title'));
-    // console.log(form.get('prompt-author'));
-    // console.log(form.get('prompt-pages'));
 }
 
 function addBookToLibrary(bk) {
